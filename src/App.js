@@ -22,6 +22,7 @@ function App() {
           ...result,
           home: JSON.parse(result.home),
           education: JSON.parse(result.education),
+          job: JSON.parse(result.job),
         });
         setTimeout(() => {
           setFadeOut(true);

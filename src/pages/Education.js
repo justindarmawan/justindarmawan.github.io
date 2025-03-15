@@ -32,6 +32,7 @@ const Education = ({ data }) => {
               <button
                 className="accordion-header"
                 onClick={() => toggleCategory(index)}
+                disabled={openCategory === index}
               >
                 {category.name}
                 <span

@@ -1,35 +1,35 @@
-.skills-container {
-    display: flex;
-    width: 100%;
-    max-width: 1200px;
-    gap: 20px;
-    align-items: center; 
-  }  
-  
-  .left-content,
-  .right-content {
-    flex: 1; 
-    min-width: 300px; 
-    flex-direction: column; 
-    align-items: flex-start; 
-    margin: 0;
-  }
+.jobs-container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  gap: 20px;
+  align-items: center; 
+}  
 
-  .skills-container .right-content h2 {
-    width: 100%;
-    text-align: left; 
-  }
+.left-content,
+.right-content {
+  flex: 1; 
+  min-width: 300px; 
+  flex-direction: column; 
+  align-items: flex-start; 
+  margin: 0;
+}
 
-  .right-content > div {
-    display: block; 
-    width: 100%; 
-    margin-bottom: 15px; 
-  }
-  
-  .skills-container ul {
-    padding-left: 20px;
-    list-style-type: disc; 
-  }
+.jobs-container .left-content h2 {
+  width: 100%;
+  text-align: left; 
+}
+
+.left-content > div {
+  display: block; 
+  width: 100%; 
+  margin-bottom: 15px; 
+}
+
+.jobs-container ul {
+  padding-left: 20px;
+  list-style-type: disc; 
+}
 
 .accordion-item {
     border-bottom: 1px solid #ddd;
@@ -83,7 +83,7 @@
   }
   
   @media (max-width: 768px) {
-    .skills-container {
+    .jobs-container {
       flex-direction: column; 
       align-items: center; 
       text-align: center; 
