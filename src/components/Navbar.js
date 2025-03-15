@@ -1,25 +1,57 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import "../styles/Navbar.css";
+import IconImage from "../assets/icon.png";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const scrollToSection = (id) => {
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+    setIsOpen(false);
+  };
+
   return (
     <nav className="navbar">
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/education">Education</Link>
-        </li>
-        <li>
-          <Link to="/job">Job</Link>
-        </li>
-        <li>
-          <Link to="/project">Project</Link>
-        </li>
-        <li>
-          <Link to="/contact">Contact</Link>
-        </li>
-      </ul>
+      <div className="navbar-logo">
+        <img src={IconImage} alt="Logo" className="logo" />
+      </div>
+
+      <div className="nav-container">
+        <ul className={`nav-links ${isOpen ? "open" : ""}`}>
+          <li>
+            <a onClick={() => scrollToSection("home")} className="nav-text">
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              onClick={() => scrollToSection("education")}
+              className="nav-text"
+            >
+              Skills & Knowledge
+            </a>
+          </li>
+          <li>
+            <a onClick={() => scrollToSection("job")} className="nav-text">
+              Experience
+            </a>
+          </li>
+          <li>
+            <a onClick={() => scrollToSection("project")} className="nav-text">
+              Projects
+            </a>
+          </li>
+          <li>
+            <a onClick={() => scrollToSection("contact")} className="nav-text">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div className="menu-toggle" onClick={() => setIsOpen(!isOpen)}>
+        ☰
+      </div>
     </nav>
   );
 };

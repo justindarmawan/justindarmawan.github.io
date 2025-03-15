@@ -1,12 +1,18 @@
+import WorkImage from "../assets/work.svg";
+
 const Job = ({ data }) => {
   return (
-    <div className="page">
-      <h1>Job Experience</h1>
-      <ul>
-        {data?.map((job, index) => <li key={index}>{job}</li>) ||
-          "No data available"}
-      </ul>
-    </div>
+    <section id="job">
+      <div className="section-container">
+        <div className="left-content">
+          <h2>Work Experience</h2>
+          <p>{data?.description}</p>
+        </div>
+        <div className="right-content">
+          <img src={WorkImage} alt="WorkImage" />
+        </div>
+      </div>
+    </section>
   );
 };
 

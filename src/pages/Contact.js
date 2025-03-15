@@ -1,9 +1,18 @@
+import ContactImage from "../assets/contact.svg";
+
 const Contact = ({ data }) => {
   return (
-    <div className="page">
-      <h1>Contact</h1>
-      <p>Email: {data?.email || "No email available"}</p>
-    </div>
+    <section id="contact">
+      <div className="section-container">
+        <div className="left-content">
+          <h2>Contact</h2>
+          <p>{data?.description}</p>
+        </div>
+        <div className="right-content">
+          <img src={ContactImage} alt="ContactImage" />
+        </div>
+      </div>
+    </section>
   );
 };
 

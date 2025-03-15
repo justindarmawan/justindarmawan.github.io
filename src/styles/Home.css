@@ -1,0 +1,13 @@
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px; 
+}
+
+@media (max-width: 768px) {
+    .home {
+        padding-top: 60px;
+    }
+}

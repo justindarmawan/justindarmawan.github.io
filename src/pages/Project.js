@@ -1,12 +1,18 @@
+import ProjectImage from "../assets/project.svg";
+
 const Project = ({ data }) => {
   return (
-    <div className="page">
-      <h1>Projects</h1>
-      <ul>
-        {data?.map((project, index) => <li key={index}>{project}</li>) ||
-          "No data available"}
-      </ul>
-    </div>
+    <section id="project">
+      <div className="section-container">
+        <div className="left-content">
+          <h2>Projects</h2>
+          <p>{data?.description}</p>
+        </div>
+        <div className="right-content">
+          <img src={ProjectImage} alt="ProjectImage" />
+        </div>
+      </div>
+    </section>
   );
 };
 
