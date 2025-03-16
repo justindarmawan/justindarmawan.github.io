@@ -1,7 +1,5 @@
-/* Import Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
-/* Navbar Container */
 .navbar {
   display: flex;
   align-items: center;
@@ -13,11 +11,10 @@
   width: 100%;
   font-family: 'Poppins', sans-serif;
   z-index: 1000;
-  background: rgba(30, 41, 59, 0.9); /* Warna gelap transparan */
+  background: rgba(30, 41, 59, 0.9);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Logo Container */
 .navbar-logo {
   flex: 1;
   display: flex;
@@ -37,7 +34,6 @@
   transform: scale(1.1);
 }
 
-/* Nav Container */
 .nav-container {
   flex: 4;
   display: flex;
@@ -62,7 +58,6 @@
   cursor: pointer;
 }
 
-/* Hover Effect */
 .nav-links a::after {
   content: "";
   position: absolute;
@@ -83,34 +78,32 @@
   color: #22d3ee;
 }
 
-/* Menu Toggle (Hamburger Icon) */
 .menu-toggle {
   display: none;
   font-size: 24px;
   cursor: pointer;
   color: white;
   position: absolute;
-  right: 20px; /* Geser lebih ke kiri */
+  right: 20px; 
   top: 50%;
   transform: translateY(-50%);
 }
 
-/* Menu Toggle (Mobile) */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
     position: absolute;
-    right: 80px; /* Sesuaikan posisi hamburger */
+    right: 60px;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 1100; /* Pastikan tetap di atas */
+    z-index: 1100; 
   }
 
   .nav-links {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Pusatkan horizontal */
-    justify-content: center; /* Pusatkan vertikal */
+    align-items: center; 
+    justify-content: center; 
     position: fixed;
     top: 0;
     left: 0;
@@ -123,22 +116,21 @@
     transition: height 0.3s ease-in-out;
     text-align: center;
     z-index: 1000;
-    padding: 0;  /* Hapus padding yang bikin geser */
-    margin: 0;   /* Hapus margin default */
-    gap: 20px;   /* Jarak antar link */
+    padding: 0;  
+    margin: 0;  
+    gap: 20px;  
   }
   
   .nav-links.open {
-    height: 100vh; /* Buka menu setinggi layar */
+    height: 100vh; 
   }
   
-  /* Styling untuk Link */
   .nav-links a {
     color: white;
     font-size: 18px;
     font-weight: 500;
     text-decoration: none;
-    padding: 10px 0; /* Padding atas-bawah biar lebih rapi */
+    padding: 10px 0; 
     width: 100%;
     text-align: center;
   }
@@ -148,7 +140,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin-left: 10px; /* Geser logo lebih ke kiri */
+    margin-left: 10px; 
   }
 }
 

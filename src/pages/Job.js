@@ -12,7 +12,7 @@ const Job = ({ data }) => {
   return (
     <section id="job">
       <div className="jobs-container">
-        <div className="right-content">
+        <div className="left-content">
           <h2>{data?.work_experience.title}</h2>
           {data?.work_experience.jobs.map((job, index) => (
             <div key={index} className="accordion-item">

@@ -1,5 +1,5 @@
 .contact-container {
-    padding-top: 80px;
+    padding-top: 10vh;
     display: flex;
     width: 100%;
     max-width: 1200px;
@@ -51,6 +51,7 @@
       align-items: center; 
       text-align: center; 
       margin: 0 30px; 
+      padding-top: 0;
     }
   
     .left-content,

@@ -1,9 +1,10 @@
+import "../styles/Project.css";
 import ProjectImage from "../assets/project.svg";
 
 const Project = ({ data }) => {
   return (
     <section id="project">
-      <div className="section-container">
+      <div className="projects-container">
         <div className="left-content">
           <h2>Projects</h2>
           <p>{data?.description}</p>

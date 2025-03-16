@@ -106,7 +106,7 @@ body {
     }
   
     .left-content {
-      align-items: center;
+      align-items: start;
       font-family: 'Poppins', sans-serif;
     }
   
@@ -125,12 +125,8 @@ body {
 
     section {
       min-height: 100vh; 
-      padding: 40px 0; 
+      padding: 5vh 0; 
       overflow: auto;
-    }
-
-    section + section {
-        margin-top: 20px;
     }
   }
    

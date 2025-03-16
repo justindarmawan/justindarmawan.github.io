@@ -30,16 +30,15 @@
     font-weight: bold;
   }
   
-  /* Mobile Adjustments */
   @media (max-width: 768px) {
     .loading-video {
-      width: 90%; /* Pastikan video tetap terlihat */
+      width: 90%; 
       height: auto;
     }
   
     .loading-text {
-      font-size: 18px; /* Kecilkan teks di mobile */
-      bottom: 20px; /* Geser teks ke bawah */
+      font-size: 18px; 
+      bottom: 20px; 
     }
   }
   
