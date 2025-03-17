@@ -3,10 +3,9 @@ import { useNavigate, useLocation } from "react-router-dom";
 import "../styles/Navbar.css";
 import IconImage from "../assets/icon.png";
 
-const Navbar = () => {
+const Navbar = ({ onNavigate }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-  const navigate = useNavigate();
   const location = useLocation();
 
   useEffect(() => {
@@ -20,7 +19,7 @@ const Navbar = () => {
 
   const handleNavigation = (path, id) => {
     if (isMobile) {
-      navigate(path);
+      onNavigate(path);
     } else {
       document.getElementById(id).scrollIntoView({ behavior: "smooth" });
     }

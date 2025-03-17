@@ -20,6 +20,14 @@ function MobileMode({ data }) {
     setFadeIn(true);
   }, []);
 
+  const handleNavigation = (path) => {
+    setFadeIn(false);
+    setTimeout(() => {
+      navigate(path);
+      setFadeIn(true);
+    }, 300);
+  };
+
   const handleSwipe = (direction) => {
     setFadeIn(false);
     setTimeout(() => {
@@ -39,7 +47,7 @@ function MobileMode({ data }) {
 
   return (
     <div {...handlers} className="swipe-container">
-      <Navbar />
+      <Navbar onNavigate={handleNavigation} />
       <div className={`container ${fadeIn ? "show" : ""}`}>
         <Routes>
           <Route path="/" element={<Home data={data?.home} />} />
