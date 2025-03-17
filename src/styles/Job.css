@@ -88,6 +88,8 @@
       align-items: center; 
       text-align: center; 
       margin: 0 30px; 
+      padding-top: 15vh;
+      padding-bottom: 10vh;
     }
   
     .left-content,

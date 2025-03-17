@@ -103,6 +103,8 @@ body {
       flex-direction: column;
       text-align: center;
       gap: 40px;
+      padding-top: 15vh;
+      padding-bottom: 10vh;
     }
   
     .left-content {
@@ -121,12 +123,6 @@ body {
   
     p {
       font-size: 1rem;
-    }
-
-    section {
-      min-height: 100vh; 
-      padding: 5vh 0; 
-      overflow: auto;
     }
   }
    

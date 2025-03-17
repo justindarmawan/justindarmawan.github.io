@@ -1,12 +1,29 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import "../styles/Navbar.css";
 import IconImage from "../assets/icon.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  const scrollToSection = (id) => {
-    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const handleNavigation = (path, id) => {
+    if (isMobile) {
+      navigate(path);
+    } else {
+      document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+    }
     setIsOpen(false);
   };
 
@@ -18,31 +35,43 @@ const Navbar = () => {
 
       <div className="nav-container">
         <ul className={`nav-links ${isOpen ? "open" : ""}`}>
-          <li>
-            <a onClick={() => scrollToSection("home")} className="nav-text">
+          <li className={location.pathname === "/" ? "active" : ""}>
+            <a
+              onClick={() => handleNavigation("/", "home")}
+              className="nav-text"
+            >
               Home
             </a>
           </li>
-          <li>
+          <li className={location.pathname === "/education" ? "active" : ""}>
             <a
-              onClick={() => scrollToSection("education")}
+              onClick={() => handleNavigation("/education", "education")}
               className="nav-text"
             >
               Skills & Knowledge
             </a>
           </li>
-          <li>
-            <a onClick={() => scrollToSection("job")} className="nav-text">
+          <li className={location.pathname === "/job" ? "active" : ""}>
+            <a
+              onClick={() => handleNavigation("/job", "job")}
+              className="nav-text"
+            >
               Experience
             </a>
           </li>
-          <li>
-            <a onClick={() => scrollToSection("project")} className="nav-text">
+          <li className={location.pathname === "/project" ? "active" : ""}>
+            <a
+              onClick={() => handleNavigation("/project", "project")}
+              className="nav-text"
+            >
               Projects
             </a>
           </li>
-          <li>
-            <a onClick={() => scrollToSection("contact")} className="nav-text">
+          <li className={location.pathname === "/contact" ? "active" : ""}>
+            <a
+              onClick={() => handleNavigation("/contact", "contact")}
+              className="nav-text"
+            >
               Contact
             </a>
           </li>
